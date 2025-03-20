@@ -13,7 +13,7 @@ pipeline {
                 label 'docker-agent-python'
             }
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r back/requirements.txt'
             }
         }
         stage('Test') {
