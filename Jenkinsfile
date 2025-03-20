@@ -7,6 +7,7 @@ pipeline {
             steps {
                 git branch: 'source', url:'https://github.com/bart120/m2-cicd.git' //plugin git
                 sh 'ls -R ${WORKSPACE}'
+                stash name: 'cource-code', includes :'**'
             }
         }
         stage('Build Backend') {
@@ -14,6 +15,7 @@ pipeline {
                 label 'docker-agent-python'
             }
             steps {
+                unstash 'cource-code'
                 sh 'ls -R ${WORKSPACE}' 
                 sh 'pip install -r back/requirements.txt'
             }
