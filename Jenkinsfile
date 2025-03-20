@@ -6,6 +6,7 @@ pipeline {
             agent any
             steps {
                 git branch: 'source', url:'https://github.com/bart120/m2-cicd.git' //plugin git
+                sh 'ls -R'
             }
         }
         stage('Build Backend') {
@@ -13,6 +14,7 @@ pipeline {
                 label 'docker-agent-python'
             }
             steps {
+                sh 'ls -R'
                 sh 'pip install -r back/requirements.txt'
             }
         }
