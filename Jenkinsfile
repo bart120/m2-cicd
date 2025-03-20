@@ -1,18 +1,29 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
-        stage('Build') {
+        stage('Checkout code') {
+            agent any
             steps {
-                echo 'Building..'
+                git branch: 'source', url:'https://github.com/bart120/m2-cicd.git' //plugin git
+            }
+        }
+        stage('Build Backend') {
+            agent {
+                label 'docker-agent-python'
+            }
+            steps {
+                sh 'pip install -r requirements.txt'
             }
         }
         stage('Test') {
+            agent any
             steps {
                 echo 'Testing..'
             }
         }
         stage('Deploy') {
+            agent any
             steps {
                 echo 'Deploying....'
             }
