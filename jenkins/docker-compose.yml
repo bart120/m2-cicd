@@ -1,5 +1,19 @@
 version: '3.8'
 services:
+  jenkins-agent-python:
+    image: jenkins-agent-python:latest
+    container_name: jenkins-agent-python
+    restart: unless-stopped
+    depends_on:
+      - jenkins
+    environment:
+      - JENKINS_URL=http://jenkins:8080
+      - JENKINS_AGENT_NAME=docker-agent-python
+      - JENKINS_SECRET=08d59b3c48983d6e3b49ca264ff0f56755b11aa7c9b7e4ded5f7c6fdf41fcc4f
+      - JENKINS_AGENT_WORKDIR=/home/jenkins
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
   jenkins:
     image: jenkins/jenkins:lts
     container_name: jenkins
