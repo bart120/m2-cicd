@@ -9,7 +9,7 @@ services:
     environment:
       - JENKINS_URL=http://jenkins:8080
       - JENKINS_AGENT_NAME=docker-agent-python-test
-      - JENKINS_SECRET=08d59b3c48983d6e3b49ca264ff0f56755b11aa7c9b7e4ded5f7c6fdf41fcc4f
+      - JENKINS_SECRET=269108a1498d5cd54c80e39c27e58e352a8e5fe49dc6e493c95ae51e1e7aedad
       - JENKINS_AGENT_WORKDIR=/home/jenkins
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -39,3 +39,29 @@ services:
     user: root
     environment:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+
+  sonarqube:
+    image: sonarqube:community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    volumes:
+      - D:/docker/sonarqube_data:/opt/sonarqube/data
+      - D:/docker/sonarqube_extensions:/opt/sonarqube/extensions
+    restart: unless-stopped
+    environment:
+      - SONAR_JDBC_URL=jdbc:postgresql://sonar-db:5432/sonarqube
+      - SONAR_JDBC_USERNAME=sonar
+      - SONAR_JDBC_PASSWORD=sonar
+    depends_on:
+      - sonar-db
+      
+  sonar-db:
+    image: postgres:13
+    container_name: sonar-db
+    volumes:
+      - D:/docker/sonar-db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_DB=sonarqube
