@@ -30,7 +30,7 @@ pipeline {
             }
         }
         stage('SonarQube Analysis'){
-            agent any,
+            agent any
             steps{
                 unstash 'source-code'
                 script {
