@@ -35,8 +35,9 @@ pipeline {
             steps{
                 unstash 'source-code'
                 script {
-                    withSonarQubeEnv('SonarQube') {
-                            sh 'cd back && sonar-scanner'
+                    def scannerHome = tool 'SonarQube Scanner'
+                    withSonarQubeEnv('scanner') {
+                        sh "${scannerHome}/bin/sonar-scanner -Dproject.settings=back/sonar-project.properties"
                     }
                 }
             }
