@@ -31,13 +31,14 @@ pipeline {
         }
         stage('SonarQube Analysis'){
             agent any
+            tools{
+                sonarQubeScanner 'scanner'
+            }
             steps{
                 unstash 'source-code'
                 script {
                     withSonarQubeEnv('SonarQube') {
-                        withSonarScanner('scanner'){
                             sh 'cd back && sonar-scanner'
-                        }
                     }
                 }
             }
