@@ -31,9 +31,7 @@ pipeline {
         }
         stage('SonarQube Analysis'){
             agent any
-            tools{
-                sonarQubeScanner 'scanner'
-            }
+
             steps{
                 unstash 'source-code'
                 script {
