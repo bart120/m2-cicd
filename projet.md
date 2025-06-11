@@ -203,7 +203,7 @@ projet-devops-ci-cd/
 La soutenance aura lieux le jeudi 8 juillet 2025.
 Le rendu se fera le jeudi 8 juillet à 23h59 maxi.
 La soutenance se déroulera sur Teams, chaque membre devra mettre sa caméra et son micro afin de participer.
-Les horaires de passage sont définis pour chaque groupe.
+Les horaires de passage sont définis pour chaque groupe (2 personnes max par groupe).
 Toute absence à la soutenance entrainera un 0 (ZERO) pour le membre du groupe.
 
 Les rendus doivent figurer sur un seul compte par groupe.
