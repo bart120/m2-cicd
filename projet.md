@@ -225,20 +225,17 @@ Les groupes sont les suivants:
 - Groupe 4: Grils Power
 - Groupe 5: Louis & Quentin & Maxime
 - Groupe 6: Sofiane
-- Groupe 7: 
-- Groupe 8: 
-- Groupe 9: 
+- Groupe 7: Yohan & Clément & Jérémie
 
 Les horaires de passage des groupes sont les suivants:
  
 - 9h30: Groupe 1
-- 10h: Groupe 
-- 10h30: Groupe 
-- 11h30: Groupe 
-- 12h: Groupe 
-- 12h30: Groupe 
-- 14h30: Groupe 
-- 15h: Groupe 
-- 15h30: Groupe 
+- 10h: Groupe 7
+- 10h30: Groupe 3
+- 11h30: Groupe 4
+- 12h: Groupe 5
+- 12h30: Groupe 2
+- 13h00: Groupe 6
+
 
 Pour ceux dont le groupe n'est pas dans la liste, contactez-moi très rapidement à vincent.leclerc@ynov.com
