@@ -1,0 +1,6 @@
+stages: [test, build, deploy]
+
+job:test:
+  stage: test
+  script:
+    - echo "Running tests"
