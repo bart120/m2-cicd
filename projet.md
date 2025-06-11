@@ -14,7 +14,7 @@ Mettre en place une chaîne CI/CD complète et professionnelle pour une applicat
 * **Infra as Code** : Terraform
 * **CI/CD** : GitHub Actions ou GitLab CI
 * **Containers** : Docker
-* **Registry** : GHCR ou GitLab Registry
+* **Registry** : GHCR ou GitLab Registry ou Azure Registry (privée)
 * **Monitoring** : Azure Monitor + Log Analytics
 * **Tests** :
 
