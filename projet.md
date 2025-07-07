@@ -229,11 +229,11 @@ Les groupes sont les suivants:
 Les horaires de passage des groupes sont les suivants:
  
 - 9h30: Groupe 1
-- 10h: Groupe 6
-- 10h30: Groupe 2
-- 11h30: Groupe 3
-- 12h: Groupe 4
-- 12h30: Groupe 5
+- 9h45: Groupe 6
+- 10h00: Groupe 2
+- 11h00: Groupe 3
+- 11h15: Groupe 4
+- 11h30: Groupe 5
 
 
 Pour ceux dont le groupe n'est pas dans la liste, contactez-moi très rapidement à vincent.leclerc@ynov.com
